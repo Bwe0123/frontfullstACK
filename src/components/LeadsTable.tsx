@@ -88,7 +88,7 @@ const LeadsTable: React.FC<LeadsTableProps> = ({ onFetchLeads }) => {
     try {
       const query = new URLSearchParams(filters).toString();
       const response = await fetch(
-        `http://localhost:5000/api/export/pdf?${query}`,
+        `https://backfullstack.onrender.com/api/export/pdf?${query}`,
         { method: "GET" }
       );
 
