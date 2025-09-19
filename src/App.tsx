@@ -10,7 +10,7 @@ import Analytics, { type AnalyticsData } from "./components/Analytics"
 
 import "./App.css"
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || "https://backfullst-naol94gct-bekzats-projects-0aefee8b.vercel.app/api"
+const API_BASE_URL = import.meta.env.VITE_API_URL || "https://backfullstack.onrender.com/api"
 const api = axios.create({ baseURL: API_BASE_URL, headers: { "Content-Type": "application/json" } })
 
 export interface Lead {
