@@ -38,7 +38,9 @@ export default function Navigation({
             <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl flex items-center justify-center shadow-glow">
               <Zap className="w-5 h-5 text-white" />
             </div>
-            <h1 className="text-lg sm:text-xl font-bold">LeadsCRM</h1>
+            <h1 className="text-lg sm:text-xl font-bold text-center sm:text-left">
+              LeadsCRM
+            </h1>
           </div>
 
           {/* Кнопки меню */}
@@ -52,7 +54,7 @@ export default function Navigation({
                   onClick={() => setCurrentView(item.id)}
                   className={`btn ${
                     isActive ? "btn-primary" : "btn-secondary"
-                  } flex items-center gap-1 px-3 py-1 text-sm sm:text-base`}
+                  } flex items-center gap-1 px-3 py-1 text-xs sm:text-sm md:text-base`}
                 >
                   <Icon className="w-4 h-4" />
                   <span>{item.label}</span>
@@ -61,24 +63,9 @@ export default function Navigation({
             })}
           </div>
         </div>
-
+</div>
         {/* Статус справа */}
-        <div className="flex items-center gap-3 flex-wrap justify-center sm:justify-end w-full sm:w-auto">
-          <span className="text-xs sm:text-sm text-secondary">
-            Последняя синхронизация:{" "}
-            <span className="font-medium text-primary">
-              {formatTime(lastSync)}
-            </span>
-          </span>
-
-          <div className="flex items-center gap-1 pl-3 border-l border-white/20">
-            <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-medium">
-              А
-            </div>
-            <ChevronDown className="w-4 h-4 text-white/70" />
-          </div>
-        </div>
-      </div>
+       
 
       {/* Нижняя статус-панель */}
       <div className="flex flex-col sm:flex-row justify-between items-center gap-2 px-4 py-2 border-t border-white/10 bg-white/5 text-xs sm:text-sm">
