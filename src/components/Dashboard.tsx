@@ -26,7 +26,7 @@ const Dashboard: React.FC = () => {
   const fetchLeads = async () => {
     try {
       setLoading(true);
-      const res = await axios.get('http://localhost:5000/api/leads', {
+      const res = await axios.get('https://backfullstack.onrender.com/api/leads', {
         params: { page: 1, limit: 1000 }
       });
       setLeads(res.data.leads || []);
